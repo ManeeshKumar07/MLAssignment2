@@ -131,20 +131,6 @@ streamlit run app.py
 
 ---
 
-## Troubleshooting
-
-### Deployment Error: `AttributeError: Can't get attribute '_RemainderColsList'`
-If you encounter this error on Streamlit Cloud, it is due to a version mismatch between the local `scikit-learn` used to train the models and the version on the cloud.
-
-**Solution:**
-Ensure your `requirements.txt` pins the exact version of `scikit-learn` used during training.
-```text
-scikit-learn==1.6.1
-```
-This project already includes a pinned `requirements.txt` to prevent this issue.
-
----
-
 ## Technologies Used
 
 - **Python 3.x**
