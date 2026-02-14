@@ -67,6 +67,11 @@ st.markdown(
         font-weight: 600;
         font-family: 'Inter', sans-serif;
     }
+    /* Specific fix for radio button text */
+    section[data-testid="stSidebar"] div[role="radiogroup"] label p,
+    section[data-testid="stSidebar"] .stRadio label p {
+        color: #ffffff !important;
+    }
     
     /* Input widgets in interaction area (not sidebar) */
     .stSelectbox label, .stFileUploader label {
@@ -191,7 +196,7 @@ artifacts = load_artifacts()
 # SIDEBAR
 # ──────────────────────────────────────────────
 with st.sidebar:
-    st.markdown("# ⚖️ Obesity Estimator")
+    st.markdown("# ⚖️ Obesity Estimator v1.2")
     st.markdown("### Classification Dashboard")
     st.markdown("---")
 
@@ -205,13 +210,50 @@ with st.sidebar:
 
     st.markdown("---")
 
-    # CSV Upload
-    st.markdown("### 📂 Upload Test Data")
-    uploaded_file = st.file_uploader(
-        "Upload a CSV file",
-        type=["csv"],
-        help="Upload test data CSV. The file should have the same features as the training data.",
+    # Data Source Selection
+    st.markdown("### 📂 Data Source")
+    data_source = st.radio(
+        "Select Source",
+        ["Upload CSV", "Test Dataset"],
+        help="Choose between uploading your own file or using the pre-loaded test data."
     )
+
+    upload_df = None
+    if data_source == "Upload CSV":
+        uploaded_file = st.file_uploader(
+            "Upload a CSV file",
+            type=["csv"],
+            help="Upload test data CSV. The file should have the same features as the training data.",
+        )
+        if uploaded_file is not None:
+             try:
+                upload_df = pd.read_csv(uploaded_file)
+             except Exception as e:
+                st.error(f"Error reading file: {e}")
+    else:
+        # Test Data (formerly Demo Data)
+        demo_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data", "test_data.csv")
+        if os.path.exists(demo_path):
+            # Custom styled info box for better contrast on dark sidebar
+            st.markdown(
+                f"""
+                <div style="
+                    background-color: rgba(255, 255, 255, 0.1); 
+                    border: 1px solid rgba(255, 255, 255, 0.2);
+                    border-radius: 8px;
+                    padding: 12px;
+                    color: #e0e0e0;
+                    font-size: 0.9rem;
+                    margin-bottom: 10px;">
+                    <strong>ℹ️ Using Test Dataset:</strong><br>
+                    <code>test_data.csv</code> ({os.path.getsize(demo_path)/1024:.1f} KB)
+                </div>
+                """,
+                unsafe_allow_html=True
+            )
+            upload_df = pd.read_csv(demo_path)
+        else:
+            st.error("Test dataset not found in `data/test_data.csv`.")
 
     st.markdown("---")
     st.markdown(
@@ -397,13 +439,12 @@ with tab2:
 
 # ─── TAB 3: PREDICTIONS ───
 with tab3:
-    st.markdown("### 📈 Make Predictions on Uploaded Data")
+    st.markdown("### 📈 Make Predictions")
     st.markdown("")
 
-    if uploaded_file is not None:
+    if upload_df is not None:
         try:
-            upload_df = pd.read_csv(uploaded_file)
-            st.success(f"✅ Loaded {upload_df.shape[0]} rows × {upload_df.shape[1]} columns")
+            st.success(f"✅ Loaded Data: {upload_df.shape[0]} rows × {upload_df.shape[1]} columns")
 
             # Show preview
             with st.expander("📋 Data Preview", expanded=True):
@@ -480,7 +521,7 @@ with tab3:
                     # If target exists, show evaluation
                     if y_true_raw is not None:
                         st.markdown("---")
-                        st.markdown("#### 📊 Evaluation on Uploaded Data")
+                        st.markdown("#### 📊 Evaluation on **Test Data**")
                         
                         # Encode y_true
                         if target_encoder:
@@ -512,7 +553,7 @@ with tab3:
                         eval_cols[5].metric("MCC", f"{mcc:.4f}")
 
                         # Classification report
-                        st.markdown("#### 📄 Classification Report")
+                        st.markdown("#### 📄 Classification Report (Test Data)")
                         report = classification_report(y_true, y_pred, target_names=target_encoder.classes_ if target_encoder else None, output_dict=True)
                         if "accuracy" in report:
                             report.pop("accuracy")
@@ -529,6 +570,6 @@ with tab3:
             st.error(f"Error processing file: {str(e)}")
     else:
         st.info(
-            "👈 Upload a CSV file from the sidebar to make predictions.\n\n"
-            "The CSV must contain the same columns as the training data (`Gender`, `Age`, `Height`, etc.)."
+            "👈 Select a **Data Source** from the sidebar to start making predictions.\n\n"
+            "You can upload your own CSV or use the built-in **Test Dataset**."
         )
