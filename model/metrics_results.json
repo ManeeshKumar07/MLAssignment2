@@ -1,0 +1,794 @@
+{
+  "Logistic Regression": {
+    "metrics": {
+      "Accuracy": 0.8818,
+      "Precision": 0.8803,
+      "Recall": 0.8818,
+      "F1": 0.8808,
+      "MCC": 0.862,
+      "AUC": 0.9834
+    },
+    "confusion_matrix": [
+      [
+        54,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        3,
+        45,
+        0,
+        0,
+        0,
+        10,
+        0
+      ],
+      [
+        0,
+        0,
+        64,
+        3,
+        0,
+        0,
+        3
+      ],
+      [
+        0,
+        0,
+        2,
+        58,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        64,
+        0,
+        0
+      ],
+      [
+        0,
+        8,
+        0,
+        0,
+        0,
+        42,
+        8
+      ],
+      [
+        0,
+        2,
+        5,
+        0,
+        0,
+        5,
+        46
+      ]
+    ],
+    "classification_report": {
+      "Insufficient_Weight": {
+        "precision": 0.9473684210526315,
+        "recall": 1.0,
+        "f1-score": 0.972972972972973,
+        "support": 54.0
+      },
+      "Normal_Weight": {
+        "precision": 0.8181818181818182,
+        "recall": 0.7758620689655172,
+        "f1-score": 0.7964601769911505,
+        "support": 58.0
+      },
+      "Obesity_Type_I": {
+        "precision": 0.9014084507042254,
+        "recall": 0.9142857142857143,
+        "f1-score": 0.9078014184397163,
+        "support": 70.0
+      },
+      "Obesity_Type_II": {
+        "precision": 0.9354838709677419,
+        "recall": 0.9666666666666667,
+        "f1-score": 0.9508196721311475,
+        "support": 60.0
+      },
+      "Obesity_Type_III": {
+        "precision": 1.0,
+        "recall": 0.9846153846153847,
+        "f1-score": 0.9922480620155039,
+        "support": 65.0
+      },
+      "Overweight_Level_I": {
+        "precision": 0.7368421052631579,
+        "recall": 0.7241379310344828,
+        "f1-score": 0.7304347826086957,
+        "support": 58.0
+      },
+      "Overweight_Level_II": {
+        "precision": 0.8070175438596491,
+        "recall": 0.7931034482758621,
+        "f1-score": 0.8,
+        "support": 58.0
+      },
+      "accuracy": 0.8817966903073287,
+      "macro avg": {
+        "precision": 0.8780431728613177,
+        "recall": 0.8798101734062326,
+        "f1-score": 0.8786767264513123,
+        "support": 423.0
+      },
+      "weighted avg": {
+        "precision": 0.8803402450304272,
+        "recall": 0.8817966903073287,
+        "f1-score": 0.88083180105671,
+        "support": 423.0
+      }
+    }
+  },
+  "Decision Tree": {
+    "metrics": {
+      "Accuracy": 0.9102,
+      "Precision": 0.9157,
+      "Recall": 0.9102,
+      "F1": 0.9108,
+      "MCC": 0.8958,
+      "AUC": 0.9704
+    },
+    "confusion_matrix": [
+      [
+        51,
+        3,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        3,
+        52,
+        0,
+        0,
+        0,
+        2,
+        1
+      ],
+      [
+        0,
+        2,
+        63,
+        1,
+        0,
+        0,
+        4
+      ],
+      [
+        0,
+        0,
+        2,
+        58,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        64,
+        0,
+        0
+      ],
+      [
+        0,
+        12,
+        0,
+        0,
+        0,
+        45,
+        1
+      ],
+      [
+        0,
+        0,
+        6,
+        0,
+        0,
+        0,
+        52
+      ]
+    ],
+    "classification_report": {
+      "Insufficient_Weight": {
+        "precision": 0.9444444444444444,
+        "recall": 0.9444444444444444,
+        "f1-score": 0.9444444444444444,
+        "support": 54.0
+      },
+      "Normal_Weight": {
+        "precision": 0.7536231884057971,
+        "recall": 0.896551724137931,
+        "f1-score": 0.8188976377952756,
+        "support": 58.0
+      },
+      "Obesity_Type_I": {
+        "precision": 0.8873239436619719,
+        "recall": 0.9,
+        "f1-score": 0.8936170212765957,
+        "support": 70.0
+      },
+      "Obesity_Type_II": {
+        "precision": 0.9666666666666667,
+        "recall": 0.9666666666666667,
+        "f1-score": 0.9666666666666667,
+        "support": 60.0
+      },
+      "Obesity_Type_III": {
+        "precision": 1.0,
+        "recall": 0.9846153846153847,
+        "f1-score": 0.9922480620155039,
+        "support": 65.0
+      },
+      "Overweight_Level_I": {
+        "precision": 0.9574468085106383,
+        "recall": 0.7758620689655172,
+        "f1-score": 0.8571428571428571,
+        "support": 58.0
+      },
+      "Overweight_Level_II": {
+        "precision": 0.896551724137931,
+        "recall": 0.896551724137931,
+        "f1-score": 0.896551724137931,
+        "support": 58.0
+      },
+      "accuracy": 0.9101654846335697,
+      "macro avg": {
+        "precision": 0.91515096797535,
+        "recall": 0.9092417161382679,
+        "f1-score": 0.9099383447827536,
+        "support": 423.0
+      },
+      "weighted avg": {
+        "precision": 0.9157322361170007,
+        "recall": 0.9101654846335697,
+        "f1-score": 0.9107793480538561,
+        "support": 423.0
+      }
+    }
+  },
+  "KNN": {
+    "metrics": {
+      "Accuracy": 0.8487,
+      "Precision": 0.8461,
+      "Recall": 0.8487,
+      "F1": 0.839,
+      "MCC": 0.8256,
+      "AUC": 0.9731
+    },
+    "confusion_matrix": [
+      [
+        52,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        10,
+        26,
+        6,
+        0,
+        0,
+        10,
+        6
+      ],
+      [
+        0,
+        0,
+        67,
+        1,
+        0,
+        1,
+        1
+      ],
+      [
+        0,
+        0,
+        1,
+        59,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        65,
+        0,
+        0
+      ],
+      [
+        4,
+        4,
+        4,
+        0,
+        0,
+        41,
+        5
+      ],
+      [
+        1,
+        1,
+        1,
+        2,
+        1,
+        3,
+        49
+      ]
+    ],
+    "classification_report": {
+      "Insufficient_Weight": {
+        "precision": 0.7761194029850746,
+        "recall": 0.9629629629629629,
+        "f1-score": 0.859504132231405,
+        "support": 54.0
+      },
+      "Normal_Weight": {
+        "precision": 0.7878787878787878,
+        "recall": 0.4482758620689655,
+        "f1-score": 0.5714285714285714,
+        "support": 58.0
+      },
+      "Obesity_Type_I": {
+        "precision": 0.8481012658227848,
+        "recall": 0.9571428571428572,
+        "f1-score": 0.8993288590604027,
+        "support": 70.0
+      },
+      "Obesity_Type_II": {
+        "precision": 0.9516129032258065,
+        "recall": 0.9833333333333333,
+        "f1-score": 0.9672131147540983,
+        "support": 60.0
+      },
+      "Obesity_Type_III": {
+        "precision": 0.9848484848484849,
+        "recall": 1.0,
+        "f1-score": 0.9923664122137404,
+        "support": 65.0
+      },
+      "Overweight_Level_I": {
+        "precision": 0.7454545454545455,
+        "recall": 0.7068965517241379,
+        "f1-score": 0.7256637168141593,
+        "support": 58.0
+      },
+      "Overweight_Level_II": {
+        "precision": 0.8032786885245902,
+        "recall": 0.8448275862068966,
+        "f1-score": 0.8235294117647058,
+        "support": 58.0
+      },
+      "accuracy": 0.8486997635933806,
+      "macro avg": {
+        "precision": 0.8424705826771534,
+        "recall": 0.8433484504913078,
+        "f1-score": 0.8341477454667261,
+        "support": 423.0
+      },
+      "weighted avg": {
+        "precision": 0.8461299275301382,
+        "recall": 0.8486997635933806,
+        "f1-score": 0.8390045048564879,
+        "support": 423.0
+      }
+    }
+  },
+  "Naive Bayes": {
+    "metrics": {
+      "Accuracy": 0.5154,
+      "Precision": 0.5472,
+      "Recall": 0.5154,
+      "F1": 0.4717,
+      "MCC": 0.4556,
+      "AUC": 0.839
+    },
+    "confusion_matrix": [
+      [
+        38,
+        0,
+        0,
+        16,
+        0,
+        0,
+        0
+      ],
+      [
+        34,
+        10,
+        3,
+        3,
+        0,
+        6,
+        2
+      ],
+      [
+        0,
+        1,
+        35,
+        30,
+        0,
+        2,
+        2
+      ],
+      [
+        0,
+        2,
+        1,
+        55,
+        0,
+        0,
+        2
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        64,
+        0,
+        0
+      ],
+      [
+        8,
+        6,
+        19,
+        14,
+        0,
+        11,
+        0
+      ],
+      [
+        6,
+        1,
+        11,
+        33,
+        0,
+        2,
+        5
+      ]
+    ],
+    "classification_report": {
+      "Insufficient_Weight": {
+        "precision": 0.4418604651162791,
+        "recall": 0.7037037037037037,
+        "f1-score": 0.5428571428571428,
+        "support": 54.0
+      },
+      "Normal_Weight": {
+        "precision": 0.5,
+        "recall": 0.1724137931034483,
+        "f1-score": 0.2564102564102564,
+        "support": 58.0
+      },
+      "Obesity_Type_I": {
+        "precision": 0.5,
+        "recall": 0.5,
+        "f1-score": 0.5,
+        "support": 70.0
+      },
+      "Obesity_Type_II": {
+        "precision": 0.36423841059602646,
+        "recall": 0.9166666666666666,
+        "f1-score": 0.5213270142180095,
+        "support": 60.0
+      },
+      "Obesity_Type_III": {
+        "precision": 1.0,
+        "recall": 0.9846153846153847,
+        "f1-score": 0.9922480620155039,
+        "support": 65.0
+      },
+      "Overweight_Level_I": {
+        "precision": 0.5238095238095238,
+        "recall": 0.1896551724137931,
+        "f1-score": 0.27848101265822783,
+        "support": 58.0
+      },
+      "Overweight_Level_II": {
+        "precision": 0.45454545454545453,
+        "recall": 0.08620689655172414,
+        "f1-score": 0.14492753623188406,
+        "support": 58.0
+      },
+      "accuracy": 0.5153664302600472,
+      "macro avg": {
+        "precision": 0.5406362648667548,
+        "recall": 0.5076088024363886,
+        "f1-score": 0.4623215749130035,
+        "support": 423.0
+      },
+      "weighted avg": {
+        "precision": 0.5471852446728828,
+        "recall": 0.5153664302600472,
+        "f1-score": 0.47167735533284966,
+        "support": 423.0
+      }
+    }
+  },
+  "Random Forest": {
+    "metrics": {
+      "Accuracy": 0.9409,
+      "Precision": 0.9464,
+      "Recall": 0.9409,
+      "F1": 0.9422,
+      "MCC": 0.9315,
+      "AUC": 0.9949
+    },
+    "confusion_matrix": [
+      [
+        51,
+        3,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        54,
+        0,
+        0,
+        0,
+        4,
+        0
+      ],
+      [
+        0,
+        2,
+        67,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        1,
+        59,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        64,
+        0,
+        0
+      ],
+      [
+        0,
+        8,
+        1,
+        0,
+        0,
+        49,
+        0
+      ],
+      [
+        0,
+        2,
+        1,
+        0,
+        0,
+        1,
+        54
+      ]
+    ],
+    "classification_report": {
+      "Insufficient_Weight": {
+        "precision": 1.0,
+        "recall": 0.9444444444444444,
+        "f1-score": 0.9714285714285714,
+        "support": 54.0
+      },
+      "Normal_Weight": {
+        "precision": 0.7714285714285715,
+        "recall": 0.9310344827586207,
+        "f1-score": 0.84375,
+        "support": 58.0
+      },
+      "Obesity_Type_I": {
+        "precision": 0.9571428571428572,
+        "recall": 0.9571428571428572,
+        "f1-score": 0.9571428571428572,
+        "support": 70.0
+      },
+      "Obesity_Type_II": {
+        "precision": 1.0,
+        "recall": 0.9833333333333333,
+        "f1-score": 0.9915966386554622,
+        "support": 60.0
+      },
+      "Obesity_Type_III": {
+        "precision": 1.0,
+        "recall": 0.9846153846153847,
+        "f1-score": 0.9922480620155039,
+        "support": 65.0
+      },
+      "Overweight_Level_I": {
+        "precision": 0.9074074074074074,
+        "recall": 0.8448275862068966,
+        "f1-score": 0.875,
+        "support": 58.0
+      },
+      "Overweight_Level_II": {
+        "precision": 0.9818181818181818,
+        "recall": 0.9310344827586207,
+        "f1-score": 0.9557522123893806,
+        "support": 58.0
+      },
+      "accuracy": 0.9408983451536643,
+      "macro avg": {
+        "precision": 0.9453995739710025,
+        "recall": 0.9394903673228797,
+        "f1-score": 0.940988334518825,
+        "support": 423.0
+      },
+      "weighted avg": {
+        "precision": 0.9463781118627453,
+        "recall": 0.9408983451536643,
+        "f1-score": 0.9422463203925825,
+        "support": 423.0
+      }
+    }
+  },
+  "XGBoost": {
+    "metrics": {
+      "Accuracy": 0.9551,
+      "Precision": 0.9567,
+      "Recall": 0.9551,
+      "F1": 0.9554,
+      "MCC": 0.9477,
+      "AUC": 0.9978
+    },
+    "confusion_matrix": [
+      [
+        50,
+        4,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        2,
+        55,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        66,
+        0,
+        0,
+        1,
+        3
+      ],
+      [
+        0,
+        0,
+        1,
+        59,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        64,
+        0,
+        0
+      ],
+      [
+        0,
+        5,
+        0,
+        0,
+        0,
+        53,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        57
+      ]
+    ],
+    "classification_report": {
+      "Insufficient_Weight": {
+        "precision": 0.9615384615384616,
+        "recall": 0.9259259259259259,
+        "f1-score": 0.9433962264150944,
+        "support": 54.0
+      },
+      "Normal_Weight": {
+        "precision": 0.859375,
+        "recall": 0.9482758620689655,
+        "f1-score": 0.9016393442622951,
+        "support": 58.0
+      },
+      "Obesity_Type_I": {
+        "precision": 0.9705882352941176,
+        "recall": 0.9428571428571428,
+        "f1-score": 0.9565217391304348,
+        "support": 70.0
+      },
+      "Obesity_Type_II": {
+        "precision": 0.9833333333333333,
+        "recall": 0.9833333333333333,
+        "f1-score": 0.9833333333333333,
+        "support": 60.0
+      },
+      "Obesity_Type_III": {
+        "precision": 1.0,
+        "recall": 0.9846153846153847,
+        "f1-score": 0.9922480620155039,
+        "support": 65.0
+      },
+      "Overweight_Level_I": {
+        "precision": 0.9636363636363636,
+        "recall": 0.9137931034482759,
+        "f1-score": 0.9380530973451328,
+        "support": 58.0
+      },
+      "Overweight_Level_II": {
+        "precision": 0.95,
+        "recall": 0.9827586206896551,
+        "f1-score": 0.9661016949152542,
+        "support": 58.0
+      },
+      "accuracy": 0.9550827423167849,
+      "macro avg": {
+        "precision": 0.9554959134003252,
+        "recall": 0.9545084818483832,
+        "f1-score": 0.954470499631007,
+        "support": 423.0
+      },
+      "weighted avg": {
+        "precision": 0.956735017694029,
+        "recall": 0.9550827423167849,
+        "f1-score": 0.9553950399878696,
+        "support": 423.0
+      }
+    }
+  }
+}
