@@ -133,7 +133,7 @@ streamlit run app.py
 
 ## Technologies Used
 
-- **Python 3.x**
+- **Python 3.11.4**
 - **scikit-learn** — ML models and evaluation
 - **XGBoost** — Gradient boosting classifier
 - **Streamlit** — Interactive web application
